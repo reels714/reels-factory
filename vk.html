@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><title>Reels Factory — вход VK</title>
+<meta name="robots" content="noindex"></head>
+<body style="font-family:sans-serif;padding:40px">
+<p id="m">Передаю ответ ВКонтакте в программу Reels Factory на этом компьютере…</p>
+<script>
+  var q = location.search || "";
+  if (q.indexOf("code=") > -1 || q.indexOf("error=") > -1) {
+    location.replace("http://localhost:3456/vk/" + q);
+  } else {
+    document.getElementById("m").textContent = "Эта страница нужна только для подключения VK в Reels Factory.";
+  }
+</script>
+</body></html>
